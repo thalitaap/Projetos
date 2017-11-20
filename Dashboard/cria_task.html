@@ -4,7 +4,8 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Untitled Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Dashboard de tasks</title>
     <!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 
@@ -22,11 +23,13 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.js"></script>
      <!-- INICIO ---------------------------------------------------------------------------->
-   <div class="container-fluid">		<!-- centro01 -->
-   <div class="row">					<!-- centro02 -->
-   <div class="col-md-12 centro">		<!-- centro03 -->
+   <div class="container-fluid">			<!-- centro01 -->
+   <div class="row">						<!-- centro02 -->
+   <div class="col-md-12 centro">			<!-- centro03 -->
    
    <!-- CONTEÚDO -->
+   <div class="container-fluid">		<!-- conteudo01 -->
+   <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
    
    <!-- Cria task deve ter:
@@ -35,12 +38,36 @@
     --- Prioridade 1 a 5
     --- Anexos
     --- Também irá identificar o usuário que criou a task
+    --- Das opções acima não foram implementadas Anexos e Identificar usuário
     -->
-   
+  <div class="container-fluid formulario"> 		<!-- inseretask01 -->
+  <h2 class="formulario_titulo">Cadastro de task:</h2>
+  <br>
+  <form method="POST" action="inclui_task.php"> <!-- formulario task -->
+  <p class="formulario_texto ">
+  Nome da task: </p>
+ <input type="text" name="task" id="task"><br><br>
+  <p class="formulario_texto ">
+  Descrição: </p>
+  <input type="text" name="descricao" id="descricao"><br><br>
+  <p class="formulario_texto ">
+  Prioridade: </p>
+  <input type="number" min="1" max="5" name="prioridade" id="prioridade"><br><br> 
+  <p class="formulario_texto ">
+  Anexos: </p>
+  <center><input type="file" name="arquivos" id="arquivos"></center> <br><br>
+  <input type="submit" value="Cadastrar nova task" id="cadastrar" name="cadastrar">
+  </form> 										<!-- fim formulario task -->
+  <br>
+  </div>									<!-- fim inseretask01 -->
+  
+   <br><a href="menu.html" class="desconecta"> Clique aqui para voltar ao menu principal </a>
+   </div>								<!-- fim conteudo02 -->
+   </div>								<!-- fim conteudo01 -->
    <!-- FIM CONTEÚDO -->
-   </div>								<!-- fim centro03 -->
-   </div>								<!-- fim centro02 -->
-   </div>								<!-- fim centro01 -->
+   </div>									<!-- fim centro03 -->
+   </div>									<!-- fim centro02 -->
+   </div>									<!-- fim centro01 -->
    <!-- FIM --------------------------------------------------------------------------------->
   </body>
 </html>

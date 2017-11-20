@@ -8,7 +8,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="811963630677-putr47biiltv76ghr7qaf5gedv2alvo5.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
+    <link href="css/style.css" rel="stylesheet">
     <title>Dashboard de tasks</title>
     <!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -71,14 +71,16 @@
    <div class="col-md-12 centro">		<!-- centro03 -->
    
    <!-- CONTEÚDO -->
+   <div class="container-fluid">		<!-- conteudo01 -->
+   <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
-   
+   <br><br><br>
    <!-- Opções -->
    <ul>
-   <li><a href="visualizar.html">Visualizar Dashboard</a></li>
-   <li><a href="cria_task.html">Criar task</a></li>
-   <li><a href="remove_task.html">Remover task</a></li>
-   <li><a href="edita_task.html">Editar task</a></li>
+   <li><a href="visualizar.php">Visualizar Dashboard</a></li><br>
+   <li><a href="cria_task.html">Criar task</a></li><br>
+   <li><a href="remove_task.html">Remover task</a></li><br>
+   <li><a href="edita_task.html">Editar task</a></li><br>
    </ul>
    
    <!--Desconectar -->
@@ -89,10 +91,9 @@
 		 auth2.disconnect();
 		} // Verificar por que não quer desconectar...
     </script>
-   <a href="index.html" onclick="desconectar();">Desconectar</a>
-
-
-   
+   <br><br><a href="index.html" onclick="desconectar();" class="desconecta">Desconectar</a>
+   </div>								<!-- fim conteudo02 -->
+   </div>								<!-- fim conteudo01 -->
    <!-- FIM CONTEÚDO -->
    </div>								<!-- fim centro03 -->
    </div>								<!-- fim centro02 -->

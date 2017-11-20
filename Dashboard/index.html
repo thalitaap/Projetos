@@ -8,7 +8,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="811963630677-putr47biiltv76ghr7qaf5gedv2alvo5.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    
+    <link href="css/style.css" rel="stylesheet">
     <title>Dashboard de tasks</title>
     <!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -33,12 +33,14 @@
    <div class="col-md-12 centro">		<!-- centro03 -->
    
    <!-- CONTEÚDO -->
+   <div class="container-fluid">		<!-- conteudo01 -->
+   <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
    
    <!-- Área de login do Google -->
-
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
+  <br><br><br><br>
+  <div class="g-signin2" align="center" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
@@ -57,7 +59,8 @@
 		window.location.href="menu.html";
       };
     </script>
-   
+   </div>								<!-- fim conteudo02 -->
+   </div>								<!-- fim conteudo01 -->
    <!-- FIM CONTEÚDO -->
    </div>								<!-- fim centro03 -->
    </div>								<!-- fim centro02 -->

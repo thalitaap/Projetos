@@ -1,11 +1,19 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    $conecta = new mysqli("localhost","adminuser","password","dashboardbd");
+    $query_select = "SELECT * FROM task_tabela ";
+    $tudo = mysqli_query($conecta,$query_select);
+    $array = mysqli_fetch_assoc($tudo);
+    $numlinhas = mysqli_num_rows($tudo);
+
+?>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard de tasks</title>
     <link href="css/style.css" rel="stylesheet">
+    <title>Dashboard de tasks</title>
     <!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 
@@ -31,7 +39,29 @@
    <div class="container-fluid">		<!-- conteudo01 -->
    <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
-<br><br><br>
+   <br>
+   <!-- Conexão: -->
+
+   <!-- A seguir o PHP que vai buscar na tabela todas as linhas e exibir -->
+
+   <?php   
+		do {
+	    		$task = $array['task'];
+    			$descricao = $array['descricao'];
+    			$prioridade = $array['prioridade'];
+   ?>
+   			  <div class="modelo_task">				<!-- quadrotask01 -->
+			  <h4 class="nome_task"><b>Task:</b> <?php echo"$task"; ?> </h4>
+              <p class="descrição_task text-justify"><b>Descrição:</b> <?php echo"$descricao"; ?> 
+              <br><br><b>Prioridade:</b> <?php echo"$prioridade"; ?></p>
+              <br> 
+              </div>								<!-- fim quadrotask01 -->
+   	<?php
+		$numlinhas = $numlinhas -1;} while( $array = mysqli_fetch_assoc($tudo));
+   ?>
+   										
+   
+   
    <br><br><br><a href="menu.html" class="desconecta"> Clique aqui para voltar ao menu principal </a>
    </div>								<!-- fim conteudo02 -->
    </div>								<!-- fim conteudo01 -->

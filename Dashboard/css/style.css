@@ -1,0 +1,87 @@
+﻿/* Geral */
+
+body {
+   background:#BAE1F4;
+}
+
+.centro {
+ text-align: center;
+ padding: 50px;
+ width:100%;
+ margin:auto;
+ padding: 50px;
+ background:#BAE1F4;
+} 
+
+.conteudo {
+ border: hidden 3px;
+ border-radius: 5px;
+ padding:20px;
+ min-height:480px; 
+ background:#FFF;
+}
+
+#titulo_dash{
+	color:#2B85E4;
+	text-shadow: 1px 1px 3px #787878;
+}
+
+.desconecta{
+	border:hidden;
+	border-radius: 5px;
+	background:#0BA7FF;
+	padding: 8px;
+	font-size:18px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.desconecta:hover{
+	text-decoration:none;
+	background:#6BBBFF;
+	color:#fff;
+}
+/* Menu */
+
+ul li{
+	list-style:none;
+	
+}
+
+li a {
+ color: #2B85E4;
+ padding:5px;
+ font-weight:bold;
+ font-size:16px;
+}
+
+li a:hover {
+ text-decoration:none;
+ background: #2B85E4;
+ color: #FFF;
+}
+
+/* Formulários */
+
+.formulario_titulo{
+	color:#2B85E4;
+}
+
+.formulario_texto{
+	font-size:16px;
+	font-weight:bold;
+	color:#2B85E4;
+}
+
+/* Tasks */
+
+.modelo_task{
+	background:#D8E5F3;
+	padding:20px;
+	margin-bottom:10px;
+}
+
+.nome_task{
+	color: #2B85E4;
+}
+	

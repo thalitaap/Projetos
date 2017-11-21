@@ -18,7 +18,6 @@ Da proposta o que não foi possível concluir a tempo:
 
 
 Cada página foi desenvolvida separadamente e será detalhado o processo a seguir:
---------------------------------------------------------------------------------------------------------------------------------
 
 # Página index.html
 - Tempo utilizado: aproximadamente 1h

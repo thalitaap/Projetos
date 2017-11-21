@@ -15,6 +15,7 @@ Dentro do período estipulado consegui realizar as seguintes tarefas:
 Da proposta o que não foi possível concluir a tempo:
 
 * Acrescentar anexos a task 
+* Sistema robusto para Anexos + Busca
 
 
 Cada página foi desenvolvida separadamente e será detalhado o processo a seguir:

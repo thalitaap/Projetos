@@ -49,12 +49,16 @@
 	    		$task = $array['task'];
     			$descricao = $array['descricao'];
     			$prioridade = $array['prioridade'];
+				$usuario_criou = $array['usuario_criou'];
+				$usuario_done = $array['usuario_done'];
    ?>
    			  <div class="modelo_task">				<!-- quadrotask01 -->
 			  <h4 class="nome_task"><b>Task:</b> <?php echo"$task"; ?> </h4>
               <p class="descrição_task text-justify"><b>Descrição:</b> <?php echo"$descricao"; ?> 
-              <br><br><b>Prioridade:</b> <?php echo"$prioridade"; ?></p>
-              <br> 
+              <br><br><b>Prioridade:</b> <?php echo"$prioridade"; ?>
+              <br><br><b>Usuário que criou task:</b><font color="#971313"> <?php echo"$usuario_criou"; ?></font>
+              <br><br><b>Usuário que marcou DONE:</b><font color="#226809"> <?php echo"$usuario_done"; ?></font>
+              </p>
               </div>								<!-- fim quadrotask01 -->
    	<?php
 		$numlinhas = $numlinhas -1;} while( $array = mysqli_fetch_assoc($tudo));

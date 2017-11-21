@@ -4,6 +4,11 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- API do Google -->
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="811963630677-putr47biiltv76ghr7qaf5gedv2alvo5.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
     <link href="css/style.css" rel="stylesheet">
     <title>Dashboard de tasks</title>
     <!-- Bootstrap -->
@@ -31,7 +36,15 @@
    <div class="container-fluid">		<!-- conteudo01 -->
    <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
-   
+   <!-- Selecionar usuario do google -->
+   <div class="g-signin2" style="display:none;" align="center" data-onsuccess="onSignIn" ></div>
+   <script> 
+   function onSignIn(googleUser) {
+	   var profile = googleUser.getBasicProfile();
+	   console.log('Full Name: ' + profile.getName()); 
+	   document.getElementById("usuario").value = profile.getName();  
+   }
+   </script>
    <!-- Cria task deve ter:
    	--- Nome (único)
     --- Descrição
@@ -41,9 +54,9 @@
     --- Das opções acima não foram implementadas Anexos e Identificar usuário
     -->
   <div class="container-fluid formulario"> 		<!-- inseretask01 -->
-  <h2 class="formulario_titulo">Cadastro de task:</h2>
+  <h3 class="formulario_titulo">Cadastro de task:</h3>
   <br>
-  <form method="POST" action="inclui_task.php"> <!-- formulario task -->
+  <form method="POST" action="inclui_task.php" enctype="multipart/form-data"> <!-- formulario task -->
   <p class="formulario_texto ">
   Nome da task: </p>
  <input type="text" name="task" id="task"><br><br>
@@ -55,7 +68,10 @@
   <input type="number" min="1" max="5" name="prioridade" id="prioridade"><br><br> 
   <p class="formulario_texto ">
   Anexos: </p>
-  <center><input type="file" name="arquivos" id="arquivos"></center> <br><br>
+  <center><input type="file" name="arquivos" id="arquivos" ></center> <br><br>
+  <!-- Seleciona usuario -->
+  <input type="hidden" name="usuario" id="usuario" >
+  
   <input type="submit" value="Cadastrar nova task" id="cadastrar" name="cadastrar">
   </form> 										<!-- fim formulario task -->
   <br>

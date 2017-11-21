@@ -1,5 +1,9 @@
 ﻿/* Geral */
 
+body {
+   font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .centro {
  text-align: center;
  padding: 50px;
@@ -7,11 +11,15 @@
  margin:auto;
  padding: 50px;
  background:#BAE1F4;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ border: hidden;
+ border-radius: 20px;
 } 
 
 .conteudo {
  border: hidden 3px;
- border-radius: 5px;
+ border-radius: 20px;
  padding:20px;
  min-height:480px; 
  background:#FFF;
@@ -49,6 +57,11 @@ li a {
  padding:5px;
  font-weight:bold;
  font-size:16px;
+}
+
+ul li:hover{
+	list-style-type:circle;
+	color:#2B85E4;
 }
 
 li a:hover {

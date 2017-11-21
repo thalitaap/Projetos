@@ -2,7 +2,8 @@
 $task = $_POST['task'];
 $descricao = $_POST['descricao'];
 $prioridade = $_POST['prioridade'];
-$arquivos = $_POST['arquivos'];
+$arquivos = $_FILES['arquivos'];
+$usuario = $_POST['usuario'];
 
 $connect = new mysqli("localhost","adminuser","password","dashboardbd");
 
@@ -24,7 +25,7 @@ if($task == "" || $task == null){
         die();
 
       }else{
-        $query = "INSERT INTO task_tabela (task,descricao, prioridade, arquivos ) VALUES ('$task','$descricao','$prioridade', '$arquivos')";
+        $query = "INSERT INTO task_tabela (task,descricao, prioridade, arquivos, usuario_criou) VALUES ('$task','$descricao','$prioridade', '$arquivos', '$usuario')";
         $insert = mysqli_query($connect,$query);
 
         if($insert){

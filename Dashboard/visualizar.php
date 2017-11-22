@@ -3,8 +3,6 @@
     $query_select = "SELECT * FROM task_tabela ";
     $tudo = mysqli_query($conecta,$query_select);
     $array = mysqli_fetch_assoc($tudo);
-    $numlinhas = mysqli_num_rows($tudo);
-
 ?>
 <!DOCTYPE html> 
 <html lang="en">
@@ -40,7 +38,6 @@
    <div class="row conteudo">			<!-- conteudo02 -->
    <h1 id="titulo_dash"> Dashboard de Tasks </h1>
    <br>
-   <!-- Conexão: -->
 
    <!-- A seguir o PHP que vai buscar na tabela todas as linhas e exibir -->
 
@@ -51,6 +48,8 @@
     			$prioridade = $array['prioridade'];
 				$usuario_criou = $array['usuario_criou'];
 				$usuario_done = $array['usuario_done'];
+				$arquivo_nome = $array['arquivo_nome'];
+				$ID = $array['ID'];
    ?>
    			  <div class="modelo_task">				<!-- quadrotask01 -->
 			  <h4 class="nome_task"><b>Task:</b> <?php echo"$task"; ?> </h4>
@@ -58,10 +57,11 @@
               <br><br><b>Prioridade:</b> <?php echo"$prioridade"; ?>
               <br><br><b>Usuário que criou task:</b><font color="#971313"> <?php echo"$usuario_criou"; ?></font>
               <br><br><b>Usuário que marcou DONE:</b><font color="#226809"> <?php echo"$usuario_done"; ?></font>
+              <br><br><b>Arquivo anexo: </b><a href="linkarquivo.php?nome=<?php echo "$ID"; ?>"><?php echo "$arquivo_nome"; ?></a>
               </p>
               </div>								<!-- fim quadrotask01 -->
    	<?php
-		$numlinhas = $numlinhas -1;} while( $array = mysqli_fetch_assoc($tudo));
+		} while( $array = mysqli_fetch_assoc($tudo));
    ?>
    										
    
